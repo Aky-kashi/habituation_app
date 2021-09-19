@@ -24,7 +24,7 @@ class Enter extends StatelessWidget {
             padding: const EdgeInsets.only(top: 100.0),
             child: Center(
               child: Text(
-                "習慣化したいタスクを設定しましょう。",
+                "習慣化したいことを設定しましょう。",
                 style: TextStyle(
                   fontSize: 20,
                 ),
@@ -40,7 +40,7 @@ class Enter extends StatelessWidget {
                   physics: NeverScrollableScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
                     return Card(
-                      shadowColor: Colors.orange[300],
+                      shadowColor: Colors.black,
                       elevation: 8,
                       clipBehavior: Clip.antiAlias,
                       shape: RoundedRectangleBorder(
@@ -48,32 +48,30 @@ class Enter extends StatelessWidget {
                       ),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.orange.shade300,
+                          color: Colors.blue[300],
                         ),
                         padding: EdgeInsets.all(16),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '習慣化したいタスクを記入してください。',
+                              '習慣化したいことは何ですか?',
                               style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.black,
+                                fontSize: 16,
+                                color: Colors.white,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             const SizedBox(height: 4),
                             TextFormField(
                               controller: model.controller[0],
-                              cursorColor: Colors.black,
                               decoration: const InputDecoration(
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Colors.black,
-                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Colors.white,
                                 ),
-                              ),
-                            )
+                              )),
+                            ),
                           ],
                         ),
                       ),
@@ -86,7 +84,7 @@ class Enter extends StatelessWidget {
                   physics: NeverScrollableScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
                     return Card(
-                      shadowColor: Colors.orange.shade300,
+                      shadowColor: Colors.black,
                       elevation: 8,
                       clipBehavior: Clip.antiAlias,
                       shape: RoundedRectangleBorder(
@@ -94,26 +92,29 @@ class Enter extends StatelessWidget {
                       ),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.orange.shade300,
+                          color: Colors.blue[300],
                         ),
                         padding: EdgeInsets.all(16),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '習慣化によって達成したいことを記入してください。',
+                              'それによって達成したいことは何ですか?',
                               style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.black,
+                                fontSize: 16,
+                                color: Colors.white,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             const SizedBox(height: 4),
                             TextFormField(
                               controller: model.controller[1],
-                              cursorColor: Colors.black,
                               decoration: const InputDecoration(
-                                  border: OutlineInputBorder()),
+                                  enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Colors.white,
+                                ),
+                              )),
                             ),
                           ],
                         ),
@@ -127,7 +128,7 @@ class Enter extends StatelessWidget {
                   physics: NeverScrollableScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
                     return Card(
-                      shadowColor: Colors.orange.shade300,
+                      shadowColor: Colors.black,
                       elevation: 8,
                       clipBehavior: Clip.antiAlias,
                       shape: RoundedRectangleBorder(
@@ -135,17 +136,17 @@ class Enter extends StatelessWidget {
                       ),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.orange.shade300,
+                          color: Colors.blue[300],
                         ),
                         padding: EdgeInsets.all(16),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '取り組む日時を入力してください。',
+                              'いつ取り組みますか?',
                               style: TextStyle(
-                                fontSize: 18,
-                                color: Colors.black,
+                                fontSize: 16,
+                                color: Colors.white,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -153,41 +154,50 @@ class Enter extends StatelessWidget {
                             TextFormField(
                               controller: model.controller[2],
                               decoration: const InputDecoration(
-                                  border: OutlineInputBorder()),
+                                  enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Colors.white,
+                                ),
+                              )),
                             ),
                           ],
                         ),
                       ),
                     );
                   }),
-              ElevatedButton(
-                  child: const Text('記入終了'),
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.orange,
-                    onPrimary: Colors.white,
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) {
-                          //goalを渡せばいい。
+              Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: SizedBox(
+                      width: 100,
+                      height: 50,
+                      child: ElevatedButton(
+                          child: const Text('記入終了'),
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.amber,
+                            onPrimary: Colors.white,
+                          ),
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  //goalを渡せばいい。
 
-                          return CompletedPage(
-                              goals: Goal(
-                            title: model.controller[0].text,
-                            goal: model.controller[1].text,
-                            time: model.controller[2].text,
-                          )); //model.controller[0].text);
-                        },
-                      ),
-                    );
+                                  return CompletedPage(
+                                      goals: Goal(
+                                    title: model.controller[0].text,
+                                    goal: model.controller[1].text,
+                                    time: model.controller[2].text,
+                                  )); //model.controller[0].text);
+                                },
+                              ),
+                            );
 
-                    //wearと言うメソッドがある。
+                            //wearと言うメソッドがある。
 
-                    //Firebaseに値を追加する。
-                    //関数を呼ぶ行為ができていない。
-                    model.addGoal();
-                  })
+                            //Firebaseに値を追加する。
+                            //関数を呼ぶ行為ができていない。
+                            model.addGoal();
+                          })))
             ],
           ),
         ]));

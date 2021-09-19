@@ -43,14 +43,14 @@ class CompletedPage extends StatelessWidget {
                     physics: NeverScrollableScrollPhysics(),
                     itemBuilder: (BuildContext context, int index) {
                       return Card(
-                        shadowColor: Colors.orange[300],
+                        shadowColor: Colors.black,
                         elevation: 8,
                         clipBehavior: Clip.antiAlias,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(24),
                         ),
                         child: Container(
-                          decoration: BoxDecoration(color: Colors.orange),
+                          decoration: BoxDecoration(color: Colors.blue[300]),
                           padding: EdgeInsets.all(16),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -90,14 +90,14 @@ class CompletedPage extends StatelessWidget {
                     physics: NeverScrollableScrollPhysics(),
                     itemBuilder: (BuildContext context, int index) {
                       return Card(
-                        shadowColor: Colors.orange[300],
+                        shadowColor: Colors.black,
                         elevation: 8,
                         clipBehavior: Clip.antiAlias,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(24),
                         ),
                         child: Container(
-                          decoration: BoxDecoration(color: Colors.orange),
+                          decoration: BoxDecoration(color: Colors.blue[300]),
                           padding: EdgeInsets.all(16),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -134,14 +134,14 @@ class CompletedPage extends StatelessWidget {
                     physics: NeverScrollableScrollPhysics(),
                     itemBuilder: (BuildContext context, int index) {
                       return Card(
-                        shadowColor: Colors.orange[300],
+                        shadowColor: Colors.black,
                         elevation: 8,
                         clipBehavior: Clip.antiAlias,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(24),
                         ),
                         child: Container(
-                          decoration: BoxDecoration(color: Colors.orange),
+                          decoration: BoxDecoration(color: Colors.blue[300]),
                           padding: EdgeInsets.all(16),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -178,7 +178,7 @@ class CompletedPage extends StatelessWidget {
                       ElevatedButton(
                         child: const Text('SNSで共有'),
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.orange,
+                          primary: Colors.blue,
                           onPrimary: Colors.white,
                         ),
                         onPressed: () {
@@ -189,7 +189,7 @@ class CompletedPage extends StatelessWidget {
                       ElevatedButton(
                         child: const Text('一覧へ戻る'),
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.orange,
+                          primary: Colors.blue,
                           onPrimary: Colors.white,
                         ),
                         onPressed: () {
