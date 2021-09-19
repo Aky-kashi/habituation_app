@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "351502104157",
+    "project_id": "habituationcoationapp",
+    "storage_bucket": "habituationcoationapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351502104157:android:91c77c10defeb9c18a7fb4",
+        "android_client_info": {
+          "package_name": "com.example.habituation_coationg_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351502104157-6kr7hfqsnne0bmmdavhaa6gdd3hs5fel.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.habituation_coationg_app",
+            "certificate_hash": "877a35c1e0a9a53cb3cc2a7b8d30786c2a15d186"
+          }
+        },
+        {
+          "client_id": "351502104157-vcjrigjre1flcr7jer9v1ean2mb3enok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1SXxO1KTeRJbkM1dY9hSeCxjD01ETZbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351502104157-vcjrigjre1flcr7jer9v1ean2mb3enok.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "351502104157-enuege45ka284hguhplk5t2qnb8kh2du.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.habituationCoationgApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

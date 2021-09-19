@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>351502104157-enuege45ka284hguhplk5t2qnb8kh2du.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.351502104157-enuege45ka284hguhplk5t2qnb8kh2du</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>351502104157-6kr7hfqsnne0bmmdavhaa6gdd3hs5fel.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD5JZfCH4DU_GtYALDS-nYYGWvF8F4JVaA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>351502104157</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.habituationCoationgApp</string>
+	<key>PROJECT_ID</key>
+	<string>habituationcoationapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>habituationcoationapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:351502104157:ios:9d8febe2cea451ef8a7fb4</string>
+</dict>
+</plist>
