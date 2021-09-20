@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:habituation_coationg_app/pages/home/enter.dart';
+import 'package:habituation_coationg_app/pages/task/max_goal_page.dart';
 
 class TaskPage extends StatelessWidget {
   @override
@@ -34,7 +35,7 @@ class TaskPage extends StatelessWidget {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (context) {
-                            return Enter();
+                            return MaxGoalPage();
                           },
                         ),
                       );

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:habituation_coationg_app/firestore_date/goal.dart';
+import 'package:habituation_coationg_app/pages/navigation_page/navigation_page.dart';
 import 'package:provider/provider.dart';
 
 import 'completed_model.dart';
-import 'home_page.dart';
 
 class CompletedPage extends StatelessWidget {
   //コンストラクタを設定する際には、変数を設定する必要がある。
@@ -196,7 +196,7 @@ class CompletedPage extends StatelessWidget {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) {
-                                return HomePage();
+                                return Navigation();
                               },
                             ),
                           );

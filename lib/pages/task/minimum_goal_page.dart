@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 
-class GoalPage extends StatelessWidget {
+class MinimumGoalPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container();
