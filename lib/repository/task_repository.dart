@@ -45,4 +45,26 @@ class TaskRepository {
     ///新しい追加されたuserの情報をtoMapとして持っている。
     ref.add(task.toMap());
   }
+
+  //isCheckedのfalseをtrueに変える。
+  static Future changeIsChecked() async {
+    DocumentReference document = FirebaseFirestore.instance
+        .collection('users')
+        .doc('adBHnzOKJ6jELKpDXgmV')
+        .collection('tasks')
+        .doc('jyVBmKvBANbgTAlfTQDi');
+
+    return await document.update({'isChecked': true});
+  }
+
+  //isCheckedがtrueのtaskを取ってくる。
+  static Future takeTrueTask() async {
+    final trueTask = FirebaseFirestore.instance;
+    trueTask
+        .collection('users')
+        .doc('adBHnzOKJ6jELKpDXgmV')
+        .collection('tasks')
+        .where('isChecked', isEqualTo: true)
+        .get();
+  }
 }

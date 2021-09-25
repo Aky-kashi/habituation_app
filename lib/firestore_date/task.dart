@@ -16,21 +16,23 @@ class Task {
   final DocumentReference? ref;
 
   final Goal goal;
+//タスクにチェックをしたかどうか。
+  final bool isChecked;
 
-  const Task({
-    required this.task,
-    required this.done,
-    required this.time,
-    required this.ideal,
-    this.ref,
-    required this.goal,
-  });
+  const Task(
+      {required this.task,
+      required this.done,
+      required this.time,
+      required this.ideal,
+      this.ref,
+      required this.goal,
+      required this.isChecked});
 
   static Future<Task> fromMap(Map<String, dynamic> map) async {
     //goalRefと言うのを作りたい。
     //実体になっていない。
     //
-    final goalRef = map['goalRef'] as DocumentReference<Map<String, dynamic>>;
+    final goalRef = map['goal'] as DocumentReference<Map<String, dynamic>>;
     // 実体が手に入る=>['goalRefを使うことができる。']
     final snapshot = await goalRef.get();
 
@@ -40,9 +42,17 @@ class Task {
     return Task(
       task: map['task'],
       done: map['done'],
-      time: map['time'],
+      //Stringに変換してもらう。
+      time: DateTime.parse(map['time'] as String),
       ideal: map['ideal'],
-      goal: map['goal'],
+      //パスはDocumentreference型9/24
+
+      //goal: map['goal'],
+      //上記だと、Documentreference型9/24
+      //常に型を意識する。
+      //TaskクラスでGoal型として定義しているので、goalには、Goal型を入れないといけない。
+      goal: goal,
+      isChecked: map['isChecked'],
       // この情報は map には含まれていないので取れないのでコメントアウト
       //ref: map['ref'],
     );
@@ -66,21 +76,24 @@ class Task {
     return {
       'task': this.task,
       'done': this.done,
-      'time': this.time,
+      'time': this.time.toIso8601String(),
       'ideal': this.ideal,
       'ref': this.ref,
-      'goal': this.goal,
+      //20210924
+      //this.goal.refにしないとref情報にならない。
+      'goal': this.goal.ref,
+      'isChecked': this.isChecked
     };
   }
 
-  Task copyWith({
-    String? task,
-    bool? done,
-    DateTime? time,
-    bool? ideal,
-    DocumentReference? ref,
-    Goal? goal,
-  }) {
+  Task copyWith(
+      {String? task,
+      bool? done,
+      DateTime? time,
+      bool? ideal,
+      DocumentReference? ref,
+      Goal? goal,
+      bool? isChecked}) {
     return Task(
       task: task ?? this.task,
       done: done ?? this.done,
@@ -88,6 +101,7 @@ class Task {
       ideal: ideal ?? this.ideal,
       ref: ref ?? this.ref,
       goal: goal ?? this.goal,
+      isChecked: isChecked ?? this.isChecked,
     );
   }
 

@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:habituation_coationg_app/pages/login/login.dart';
 import 'package:habituation_coationg_app/pages/navigation_page/navigation_page.dart';
 
 Future<void> main() async {
@@ -19,8 +18,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: "HabitBoddy",
+        /* title: "HabitBoddy",
         debugShowCheckedModeBanner: false,
-        home: (currentUser != null) ? Navigation() : LoginPage());
+        home: (currentUser != null) ? */
+        home: Navigation() /*: LoginPage())*/);
   }
 }
